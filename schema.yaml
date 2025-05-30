@@ -1,0 +1,1184 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/hl4/v1/auditlog/:
+    get:
+      operationId: listAuditLogs
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AuditLog'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createAuditLog
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/auditlog/{id}/:
+    get:
+      operationId: retrieveAuditLog
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this audit log.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateAuditLog
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this audit log.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateAuditLog
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this audit log.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyAuditLog
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this audit log.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/conferencias/:
+    get:
+      operationId: listConferencias
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Conferencias'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createConferencias
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conferencias'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/conferencias/{idconferencia}/:
+    get:
+      operationId: retrieveConferencias
+      description: ''
+      parameters:
+      - name: idconferencia
+        in: path
+        required: true
+        description: A unique integer value identifying this conferencias.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conferencias'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateConferencias
+      description: ''
+      parameters:
+      - name: idconferencia
+        in: path
+        required: true
+        description: A unique integer value identifying this conferencias.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conferencias'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateConferencias
+      description: ''
+      parameters:
+      - name: idconferencia
+        in: path
+        required: true
+        description: A unique integer value identifying this conferencias.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Conferencias'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conferencias'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyConferencias
+      description: ''
+      parameters:
+      - name: idconferencia
+        in: path
+        required: true
+        description: A unique integer value identifying this conferencias.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/cursos/:
+    get:
+      operationId: listCursos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cursos'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createCursos
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cursos'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/cursos/{idcursos}/:
+    get:
+      operationId: retrieveCursos
+      description: ''
+      parameters:
+      - name: idcursos
+        in: path
+        required: true
+        description: A unique integer value identifying this cursos.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cursos'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateCursos
+      description: ''
+      parameters:
+      - name: idcursos
+        in: path
+        required: true
+        description: A unique integer value identifying this cursos.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cursos'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateCursos
+      description: ''
+      parameters:
+      - name: idcursos
+        in: path
+        required: true
+        description: A unique integer value identifying this cursos.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Cursos'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cursos'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyCursos
+      description: ''
+      parameters:
+      - name: idcursos
+        in: path
+        required: true
+        description: A unique integer value identifying this cursos.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/integrantes/:
+    get:
+      operationId: listIntegrantes
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Integrantes'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createIntegrantes
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Integrantes'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/integrantes/{idintegrantes}/:
+    get:
+      operationId: retrieveIntegrantes
+      description: ''
+      parameters:
+      - name: idintegrantes
+        in: path
+        required: true
+        description: A unique integer value identifying this integrantes.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Integrantes'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateIntegrantes
+      description: ''
+      parameters:
+      - name: idintegrantes
+        in: path
+        required: true
+        description: A unique integer value identifying this integrantes.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Integrantes'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateIntegrantes
+      description: ''
+      parameters:
+      - name: idintegrantes
+        in: path
+        required: true
+        description: A unique integer value identifying this integrantes.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Integrantes'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Integrantes'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyIntegrantes
+      description: ''
+      parameters:
+      - name: idintegrantes
+        in: path
+        required: true
+        description: A unique integer value identifying this integrantes.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/noticias/:
+    get:
+      operationId: listNoticias
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Noticias'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createNoticias
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Noticias'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/noticias/{idnoticia}/:
+    get:
+      operationId: retrieveNoticias
+      description: ''
+      parameters:
+      - name: idnoticia
+        in: path
+        required: true
+        description: A unique integer value identifying this noticias.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Noticias'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateNoticias
+      description: ''
+      parameters:
+      - name: idnoticia
+        in: path
+        required: true
+        description: A unique integer value identifying this noticias.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Noticias'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateNoticias
+      description: ''
+      parameters:
+      - name: idnoticia
+        in: path
+        required: true
+        description: A unique integer value identifying this noticias.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Noticias'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Noticias'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyNoticias
+      description: ''
+      parameters:
+      - name: idnoticia
+        in: path
+        required: true
+        description: A unique integer value identifying this noticias.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/ofertasempleo/:
+    get:
+      operationId: listOfertasEmpleos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OfertasEmpleo'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createOfertasEmpleo
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfertasEmpleo'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/ofertasempleo/{idoferta}/:
+    get:
+      operationId: retrieveOfertasEmpleo
+      description: ''
+      parameters:
+      - name: idoferta
+        in: path
+        required: true
+        description: A unique integer value identifying this ofertas empleo.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfertasEmpleo'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateOfertasEmpleo
+      description: ''
+      parameters:
+      - name: idoferta
+        in: path
+        required: true
+        description: A unique integer value identifying this ofertas empleo.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfertasEmpleo'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateOfertasEmpleo
+      description: ''
+      parameters:
+      - name: idoferta
+        in: path
+        required: true
+        description: A unique integer value identifying this ofertas empleo.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/OfertasEmpleo'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfertasEmpleo'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyOfertasEmpleo
+      description: ''
+      parameters:
+      - name: idoferta
+        in: path
+        required: true
+        description: A unique integer value identifying this ofertas empleo.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/proyectos/:
+    get:
+      operationId: listProyectos
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Proyectos'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createProyectos
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyectos'
+          description: ''
+      tags:
+      - api
+  /api/hl4/v1/proyectos/{idproyectos}/:
+    get:
+      operationId: retrieveProyectos
+      description: ''
+      parameters:
+      - name: idproyectos
+        in: path
+        required: true
+        description: A unique integer value identifying this proyectos.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyectos'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateProyectos
+      description: ''
+      parameters:
+      - name: idproyectos
+        in: path
+        required: true
+        description: A unique integer value identifying this proyectos.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyectos'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateProyectos
+      description: ''
+      parameters:
+      - name: idproyectos
+        in: path
+        required: true
+        description: A unique integer value identifying this proyectos.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Proyectos'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Proyectos'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyProyectos
+      description: ''
+      parameters:
+      - name: idproyectos
+        in: path
+        required: true
+        description: A unique integer value identifying this proyectos.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    AuditLog:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        timestamp:
+          type: string
+          format: date-time
+        table_name:
+          type: string
+          maxLength: 255
+        change_type:
+          type: string
+          maxLength: 6
+        affected_record_id:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+          nullable: true
+        modified_data:
+          type: object
+          nullable: true
+        user:
+          type: integer
+      required:
+      - timestamp
+      - table_name
+      - change_type
+      - user
+    Conferencias:
+      type: object
+      properties:
+        idconferencia:
+          type: integer
+          readOnly: true
+        nombre_conferencia:
+          type: string
+          maxLength: 620
+        ponente_conferencia:
+          type: string
+          maxLength: 250
+        fecha_conferencia:
+          type: string
+          format: date-time
+          nullable: true
+        descripcion_conferencia:
+          type: string
+          maxLength: 1200
+        imagen_conferencia:
+          type: string
+          format: binary
+        link_conferencia:
+          type: string
+          maxLength: 1200
+        creador:
+          type: integer
+      required:
+      - nombre_conferencia
+      - ponente_conferencia
+      - descripcion_conferencia
+      - imagen_conferencia
+      - link_conferencia
+      - creador
+    Cursos:
+      type: object
+      properties:
+        idcursos:
+          type: integer
+          readOnly: true
+        nombre_curso:
+          type: string
+          maxLength: 120
+        fechainicial_curso:
+          type: string
+          format: date-time
+          nullable: true
+        fechafinal_curso:
+          type: string
+          format: date-time
+          nullable: true
+        link_curso:
+          type: string
+          maxLength: 1200
+        descripcion_curso:
+          type: string
+          maxLength: 1200
+        creador:
+          type: integer
+      required:
+      - nombre_curso
+      - link_curso
+      - descripcion_curso
+      - creador
+    Integrantes:
+      type: object
+      properties:
+        idintegrantes:
+          type: integer
+          readOnly: true
+        nombre_integrante:
+          type: string
+          maxLength: 220
+        semestre:
+          type: string
+          maxLength: 50
+        correo:
+          type: string
+          maxLength: 550
+        link_git:
+          type: string
+          maxLength: 650
+        imagen:
+          type: string
+          format: binary
+        estado:
+          type: boolean
+        "rese\xF1a":
+          type: string
+        creador:
+          type: integer
+      required:
+      - nombre_integrante
+      - semestre
+      - correo
+      - link_git
+      - imagen
+      - estado
+      - "rese\xF1a"
+      - creador
+    Noticias:
+      type: object
+      properties:
+        idnoticia:
+          type: integer
+          readOnly: true
+        nombre_noticia:
+          type: string
+          maxLength: 600
+        fecha_noticia:
+          type: string
+          format: date-time
+        link_noticia:
+          type: string
+          maxLength: 250
+        description_noticia:
+          type: string
+          maxLength: 1450
+        fuente:
+          type: string
+          nullable: true
+          maxLength: 250
+        imagen_noticia:
+          type: string
+          format: binary
+        creador:
+          type: integer
+      required:
+      - nombre_noticia
+      - fecha_noticia
+      - link_noticia
+      - description_noticia
+      - imagen_noticia
+      - creador
+    OfertasEmpleo:
+      type: object
+      properties:
+        idoferta:
+          type: integer
+          readOnly: true
+        titulo_empleo:
+          type: string
+          maxLength: 620
+        empresa:
+          type: string
+          maxLength: 230
+        fecha_publicacion:
+          type: string
+          format: date-time
+          nullable: true
+        descripcion_empleo:
+          type: string
+          maxLength: 1200
+        imagen:
+          type: string
+        link_oferta:
+          type: string
+          format: binary
+        fecha_expiracion:
+          type: string
+          format: date-time
+          nullable: true
+        creador:
+          type: integer
+      required:
+      - titulo_empleo
+      - empresa
+      - descripcion_empleo
+      - imagen
+      - link_oferta
+      - creador
+    Proyectos:
+      type: object
+      properties:
+        idproyectos:
+          type: integer
+          readOnly: true
+        nombre_proyecto:
+          type: string
+          maxLength: 850
+        fecha_proyecto:
+          type: string
+          format: date-time
+        link_proyecto:
+          type: string
+          maxLength: 1200
+        description_proyecto:
+          type: string
+          maxLength: 1200
+        creador:
+          type: integer
+        integrantes:
+          type: array
+          items:
+            type: string
+          readOnly: true
+      required:
+      - nombre_proyecto
+      - fecha_proyecto
+      - link_proyecto
+      - description_proyecto
+      - creador
