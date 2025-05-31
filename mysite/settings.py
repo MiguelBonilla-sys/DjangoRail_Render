@@ -25,7 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Detectar entorno de despliegue
 IS_RAILWAY = os.getenv('RAILWAY_ENVIRONMENT') is not None
 IS_RENDER = os.getenv('RENDER') == 'True'
-IS_PRODUCTION = IS_RAILWAY or IS_RENDER
+IS_PRODUCTION_ENV = os.getenv('IS_PRODUCTION', 'False').lower() == 'true'
+IS_PRODUCTION = IS_RAILWAY or IS_RENDER or IS_PRODUCTION_ENV
+
+print("DEBUG SETTINGS:")
+print(f"IS_RAILWAY: {IS_RAILWAY}")
+print(f"IS_RENDER: {IS_RENDER}")
+print(f"IS_PRODUCTION_ENV: {IS_PRODUCTION_ENV}")
+print(f"IS_PRODUCTION: {IS_PRODUCTION}")
+print(f"Configurando base de datos, IS_PRODUCTION = {IS_PRODUCTION}")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -140,6 +148,8 @@ REST_FRAMEWORK = {
 if IS_PRODUCTION:
     # Production database from environment variable
     database_url = os.getenv("DATABASE_URL")
+    print(f"Modo producción detectado - usando PostgreSQL")
+    print(f"DATABASE_URL encontrado: {'Sí' if database_url else 'No'}")
     if database_url:
         tmpPostgres = urlparse(database_url)
         DATABASES = {
@@ -155,16 +165,19 @@ if IS_PRODUCTION:
                 },
             }
         }
+        print(f"DATABASES configurado: {DATABASES}")
     else:
         raise ValueError("DATABASE_URL environment variable is required in production")
 else:
     # Development database (SQLite)
+    print(f"Modo desarrollo detectado - usando SQLite")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+    print(f"DATABASES configurado: {DATABASES}")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
