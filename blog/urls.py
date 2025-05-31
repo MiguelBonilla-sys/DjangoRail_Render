@@ -10,6 +10,7 @@ from blog.Views.IntegrantesView import IntegrantesViewSet
 from blog.Views.NoticiasView import NoticiasViewSet
 from blog.Views.OfertasEmpleoView import OfertasEmpleoViewSet
 from blog.Views.ProyectosView import ProyectosViewSet
+from blog.Views.AuthView import login_view, logout_view, profile_view, auth_status_view
 
 router = routers.DefaultRouter()
 router.register(r'auditlog', AuditLogViewSet)
@@ -32,5 +33,11 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('hl4/v1/', include(router.urls)),
+    # Endpoints de autenticación
+    path('auth/login/', login_view, name='auth-login'),
+    path('auth/logout/', logout_view, name='auth-logout'), 
+    path('auth/profile/', profile_view, name='auth-profile'),
+    path('auth/status/', auth_status_view, name='auth-status'),
+    # Documentación
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]

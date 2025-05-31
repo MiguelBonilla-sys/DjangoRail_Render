@@ -236,6 +236,37 @@ if FRONTEND_URL:
 
 CORS_ALLOW_CREDENTIALS = True
 
+# Configuraciones adicionales para CSRF y sesiones
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://localhost:3000",
+]
+
+# Add production frontend domains to CSRF trusted origins
+if FRONTEND_URL:
+    CSRF_TRUSTED_ORIGINS.append(FRONTEND_URL)
+
+# Session and CSRF settings for cross-origin requests
+SESSION_COOKIE_NAME = 'sessionid'
+SESSION_COOKIE_AGE = 86400  # 24 hours
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SAMESITE = 'Lax'  # Allow cross-site requests for authentication
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+CSRF_COOKIE_NAME = 'csrftoken'
+CSRF_COOKIE_HTTPONLY = False  # Allow JavaScript access for frontend
+CSRF_COOKIE_SAMESITE = 'Lax'
+CSRF_USE_SESSIONS = False
+
+# En desarrollo, permitir cookies sin HTTPS
+if not IS_PRODUCTION:
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    CSRF_COOKIE_DOMAIN = None
+    SESSION_COOKIE_DOMAIN = None
+
 # Redis and Celery Configuration
 redis_url = os.getenv('REDIS_URL')
 if redis_url and IS_PRODUCTION:
